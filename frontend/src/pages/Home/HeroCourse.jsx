@@ -12,23 +12,25 @@ function HeroCourse() {
     const getBook = async () => {
       try {
         const res = await axios.get("http://localhost:5000/book");
-
+  
         // console.log(res.data);
         
         // Assuming `res.data` contains your list of books, filter the "Free" category
         const filteredBooks = res.data.filter(
           (items) => items.category === "Free"
         );
-
+  
         console.log(filteredBooks);
-
+  
         setBook(filteredBooks);
       } catch (error) {
-        console.log(error);
+        // Log detailed error information
+        console.error("Error fetching books:", error.response ? error.response.data : error.message);
       }
     };
     getBook();
   }, []);
+  
 
   const settings = {
     dots: true,

@@ -33,7 +33,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 sticky top-0 z-10">
         {/* Navbar Left */}
         <div className="navbar-start">
           <div className="dropdown">

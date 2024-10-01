@@ -4,7 +4,7 @@ import banner from "../../assets/banner.png";
 function Hero() {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero bg-base-200 min-h-[60vh]">
         <div className="hero-content flex-col lg:flex-row-reverse">
           {/* Responsive image */}
           <img
